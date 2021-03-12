@@ -7,9 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>LEARN BASIC WEBVIEW 2</h1>
-
+    <h1>LEARN BASIC WEBVIEW 3</h1>
+    <button style="width: 100%" onclick="sendMessageToReactNative()">SEND MESSAGE TO REACT NATIVE</button>
     <script>
+        function sendMessageToReactNative() {
+            window.ReactNativeWebView.postMessage('Message from webview.html');
+        }
+
         (function(){
             var body = document.getElementsByTagName('BODY')[0];
             document.addEventListener('message', function(msg) {
