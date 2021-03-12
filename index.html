@@ -8,5 +8,16 @@
 </head>
 <body>
     <h1>LEARN BASIC WEBVIEW</h1>
+
+    <script>
+        (function(){
+            var body = document.getElementsByTagName('BODY')[0];
+            document.addEventListener('message', function(msg) {
+                console.log("MESSAGE", msg);
+                var color = msg.data;
+                body.style.backgroundColor = color;
+            })
+        })();
+    </script>
 </body>
 </html>
